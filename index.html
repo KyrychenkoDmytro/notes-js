@@ -32,13 +32,13 @@
                     </tr>
                 </thead>
                 <tbody class="notes-table__body">
-                    <tr class="notes-table__body-row">
+                    <!-- <tr class="notes-table__body-row">
                         <td>
                             <div class="notes-table__body-name">
                                 Shopping list
                             </div>
                         </td>
-                        <td>april 20, 2021</td>
+                        <td>April 20, 2021</td>
                         <td>task</td>
                         <td>tomatoes</td>
                         <td>time</td>
@@ -52,19 +52,20 @@
                                         alt="delete"></div>
                             </div>
                         </td>
-                    </tr>
+                    </tr> -->
                     <tr class="notes-table__body-row">
                         <td class="notes-table__body-form" colspan="6">
                             <form>
-                                <input class="notes-table__body-form-name" type="text" value="" placeholder="Name" required>
+                                <input class="notes-table__body-form-name" type="text" value="" placeholder="Name"
+                                    required>
                                 <input class="notes-table__body-form-date" type="date" required>
                                 <select class="notes-table__body-form-category" name="category">
                                     <option value="Task">Task</option>
                                     <option value="Random Thought">Random Thought</option>
                                     <option value="Idea">Idea</option>
                                 </select>
-                                <textarea class="notes-table__body-form-text" name="Content" maxlength="100" cols="30" rows="2" placeholder="Content"
-                                    required></textarea>
+                                <textarea class="notes-table__body-form-text" name="Content" maxlength="100" cols="30"
+                                    rows="2" placeholder="Content" required></textarea>
                                 <button class="notes-table__body-form-submit" type="submit">Add Note</button>
                                 <button class="notes-table__body-form-close">x</button>
                             </form>
@@ -72,6 +73,7 @@
                     </tr>
                 </tbody>
             </table>
+
             <div>
                 <button class="create-new-note">Create Note</button>
             </div>
@@ -79,23 +81,23 @@
             <table class="archives-table">
                 <thead class="archives-table__header">
                     <tr class="archives-table__header-row">
-                        <th>Category</th>
-                        <th>Active</th>
-                        <th>Archived</th>
+                        <th colspan="2">Category</th>
+                        <th colspan="2">Active</th>
+                        <th colspan="2">Archived</th>
                     </tr>
                 </thead>
                 <tbody class="archives-table__body">
-                    <tr class="archives-table__body-row">
+                    <!-- <tr class="archives-table__body-row">
                         <td>task</td>
                         <td>13</td>
                         <td>4</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
     </div>
 
-    <script src="./app.js"></script>
+    <script type="module" src="./app.js"></script>
 </body>
 
 </html>

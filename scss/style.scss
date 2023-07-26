@@ -1,3 +1,5 @@
+@import './variables';
+
 * {
   margin: 0;
   padding: 0;
@@ -5,9 +7,10 @@
 }
 
 body {
-  font-size: 22px;
-  font-weight: 400;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: $fz;
+  font-weight: 500;
+  font-family: $ff;
+  color: $color-main;
 }
 
 .container {
@@ -18,9 +21,12 @@ body {
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  // table-layout: auto;
-  table-layout: fixed;
+  border-spacing: 0 20px;
+}
+
+th,
+td {
+  padding: 10px;
 }
 
 td {
@@ -30,4 +36,131 @@ td {
 form {
   display: flex;
   justify-content: space-between;
+  padding: 0 10px;
+}
+
+.notes-table,
+.archives-table {
+  &__header {
+    color: #fff;
+
+    &-wrapper-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &-icons-archive-all,
+    &-icons-delete-all {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+    }
+
+
+    th {
+      background-color: $bg-table-header;
+
+      &:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+
+      &:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+  }
+
+  &__body {
+    &-row {
+      td {
+        background-color: $bg-table-row;
+
+        &:first-child {
+          border-radius: 10px 0 0 10px;
+        }
+
+        &:last-child {
+          border-radius: 0 10px 10px 0;
+        }
+      }
+    }
+
+    &-form {
+      border-radius: 10px !important;
+      
+
+      &-name,
+      &-date,
+      &-category,
+      &-text {
+        padding: 6px 12px;
+        border-radius: 10px;
+        font-size: 18px;
+      }
+
+      &-name {
+        min-width: 260px;
+      }
+
+      &-submit {
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      &-close {
+        padding: 6px 10px;
+        border-radius: 10px;
+        font-size: 26px;
+      }
+    }
+
+    &-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      &::before {
+        content: url(../assets/icons/cart.svg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 42px;
+        height: 42px;
+        background-color: $bg-icon-task;
+        border-radius: 50%;
+      }
+    }
+
+    &-wrapper-icons {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 5px;
+    }
+
+    &-icons-archive,
+    &-icons-edit,
+    &-icons-delete {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.create-new-note {
+  display: block;
+  margin: 0 0 40px auto;
+  padding: 6px 12px;
+  font-size: $fz;
+  border-radius: 6px;
 }

@@ -30,7 +30,7 @@ td {
 }
 
 td {
-  text-align: center;
+  text-align: start;
 }
 
 form {
@@ -91,7 +91,7 @@ form {
 
     &-form {
       border-radius: 10px !important;
-      
+
 
       &-name,
       &-date,
@@ -122,12 +122,11 @@ form {
 
     &-name {
       display: flex;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       gap: 5px;
 
-      &::before {
-        content: url(../assets/icons/cart.svg);
+      div {
         display: flex;
         justify-content: center;
         align-items: center;

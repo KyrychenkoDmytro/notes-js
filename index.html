@@ -32,10 +32,10 @@
                     </tr>
                 </thead>
                 <tbody class="notes-table__body">
-                    <!-- <tr class="notes-table__body-row">
+                    <tr class="notes-table__body-row">
                         <td>
                             <div class="notes-table__body-name">
-                                Shopping list
+                                <div><img src="./assets/icons/idea.svg" alt="idea"></div>Shopping list
                             </div>
                         </td>
                         <td>April 20, 2021</td>
@@ -52,10 +52,10 @@
                                         alt="delete"></div>
                             </div>
                         </td>
-                    </tr> -->
+                    </tr>
                     <tr class="notes-table__body-row">
                         <td class="notes-table__body-form" colspan="6">
-                            <form>
+                            <form id="noteForm">
                                 <input class="notes-table__body-form-name" type="text" value="" placeholder="Name"
                                     required>
                                 <input class="notes-table__body-form-date" type="date" required>
@@ -75,7 +75,7 @@
             </table>
 
             <div>
-                <button class="create-new-note">Create Note</button>
+                <button class="create-new-note" id="createNote">Create Note</button>
             </div>
 
             <table class="archives-table">

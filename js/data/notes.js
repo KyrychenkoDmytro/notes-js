@@ -1,6 +1,7 @@
-export const data = [
+export let notes = [
     {
         id: 1,
+        imgUrl: './assets/icons/task.svg',
         name: 'Shopping List',
         created: 'April 20, 2021',
         category: 'Task',
@@ -10,6 +11,7 @@ export const data = [
     },
     {
         id: 2,
+        imgUrl: './assets/icons/thought.svg',
         name: 'The theory of evolut...',
         created: 'April 27, 2021',
         category: 'Random Thought',
@@ -19,6 +21,7 @@ export const data = [
     },
     {
         id: 3,
+        imgUrl: './assets/icons/idea.svg',
         name: 'New Feature',
         created: 'May 05, 2021',
         category: 'Idea',
@@ -28,6 +31,7 @@ export const data = [
     },
     {
         id: 4,
+        imgUrl: './assets/icons/idea.svg',
         name: 'William Gaddis',
         created: 'May 07, 2021',
         category: 'Idea',
@@ -37,6 +41,7 @@ export const data = [
     },
     {
         id: 5,
+        imgUrl: './assets/icons/task.svg',
         name: 'Books',
         created: 'May 15, 2021',
         category: 'Task',
@@ -46,6 +51,7 @@ export const data = [
     },
     {
         id: 6,
+        imgUrl: './assets/icons/task.svg',
         name: 'Learn javascript',
         created: 'April 12, 2021',
         category: 'Task',
@@ -55,6 +61,7 @@ export const data = [
     },
     {
         id: 7,
+        imgUrl: './assets/icons/thought.svg',
         name: 'React or Angular?',
         created: 'April 15, 2021',
         category: 'Random Thought',
@@ -63,3 +70,6 @@ export const data = [
         archived: true,
     }
 ];
+
+export const getNotes = () => notes;
+export const addNewNote = (newNote) => (notes = [...notes, newNote]);

@@ -1,11 +1,12 @@
 export const renderNote = (note) => {
-        const { name, created, category, content, dates } = note;
+        const { name, imgUrl, created, category, content, dates } = note;
     return (
         `<tr class="notes-table__body-row">
         <td>
             <div class="notes-table__body-name">
+                <div><img src="${imgUrl}" alt="${category}"></div>
                 ${name}
-            </div>
+            </img>
         </td>
         <td>${created}</td>
         <td>${category}</td>

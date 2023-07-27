@@ -2,7 +2,7 @@ export const renderForm = () => {
     return (
         `<tr class="notes-table__body-row notes-form">
         <td class="notes-table__body-form" colspan="6">
-            <form>
+            <form id="noteForm">
                 <input class="notes-table__body-form-name" type="text" value="" placeholder="Name"
                     required>
                 <input class="notes-table__body-form-date" type="date" required>

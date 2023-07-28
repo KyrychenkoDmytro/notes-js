@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  color: #5f5f62;
+}
+
+.container {
+  max-width: 1640px;
+  padding: 20px;
+  margin: 60px auto;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0 20px;
+}
+
+th,
+td {
+  max-width: 280px;
+  padding: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+td {
+  text-align: start;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+}
+
+.notes-table__header,
+.archives-table__header {
+  color: #fff;
+}
+.notes-table__header-wrapper-icons,
+.archives-table__header-wrapper-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.notes-table__header-icons-archive-all, .notes-table__header-icons-delete-all,
+.archives-table__header-icons-archive-all,
+.archives-table__header-icons-delete-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+.notes-table__header th,
+.archives-table__header th {
+  background-color: #999999;
+}
+.notes-table__header th:first-child,
+.archives-table__header th:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.notes-table__header th:last-child,
+.archives-table__header th:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.notes-table__body-row td,
+.archives-table__body-row td {
+  background-color: #e8eaf5;
+}
+.notes-table__body-row td:first-child,
+.archives-table__body-row td:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.notes-table__body-row td:last-child,
+.archives-table__body-row td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.notes-table__body-form,
+.archives-table__body-form {
+  border-radius: 10px !important;
+}
+.notes-table__body-form-name, .notes-table__body-form-date, .notes-table__body-form-category, .notes-table__body-form-text,
+.archives-table__body-form-name,
+.archives-table__body-form-date,
+.archives-table__body-form-category,
+.archives-table__body-form-text {
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.notes-table__body-form-name,
+.archives-table__body-form-name {
+  min-width: 260px;
+}
+.notes-table__body-form-submit,
+.archives-table__body-form-submit {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.notes-table__body-form-close,
+.archives-table__body-form-close {
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 26px;
+}
+.notes-table__body-name,
+.archives-table__body-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.notes-table__body-name div,
+.archives-table__body-name div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 42px;
+          flex: 0 0 42px;
+  height: 42px;
+  background-color: #616161;
+  border-radius: 50%;
+}
+.notes-table__body-name span,
+.archives-table__body-name span {
+  max-width: 220px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.notes-table__body-wrapper-icons,
+.archives-table__body-wrapper-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.notes-table__body-icons-archive, .notes-table__body-icons-edit, .notes-table__body-icons-delete,
+.archives-table__body-icons-archive,
+.archives-table__body-icons-edit,
+.archives-table__body-icons-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.archives-table__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.archives-table__td {
+  text-align: center;
+}
+
+.create-new-note {
+  display: block;
+  margin: 0 0 40px auto;
+  padding: 6px 12px;
+  font-size: 22px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.unArchiveNote {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.show-notes {
+  cursor: pointer;
+}
+
+.archiveNote td {
+  background-color: #dcccd1;
+}/*# sourceMappingURL=style.css.map */

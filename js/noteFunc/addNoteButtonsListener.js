@@ -16,8 +16,8 @@ export const addNoteButtonsListener = (tBody, notes) => {
                 e.preventDefault();
                 editNote(noteId, note, tBody);
             });
-            deleteBtn.addEventListener('click', () => deleteNote(noteId, note, tBody));
-            archiveBtn.addEventListener('click', () => archiveNote(noteId, note, tBody));
+            deleteBtn.addEventListener('click', () => deleteNote(noteId));
+            archiveBtn.addEventListener('click', () => archiveNote(noteId));
 
         }
     });

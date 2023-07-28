@@ -5,7 +5,7 @@ export const renderNote = (note) => {
         <td>
             <div class="notes-table__body-name">
                 <div><img src="${imgUrl}" alt="${category}"></div>
-                ${name}
+                <span>${name}</span>
             </img>
         </td>
         <td>${created}</td>

@@ -1,14 +1,11 @@
 import { archiveOneNote } from "../data/notes.js";
-import { renderNote } from "../render/renderFunc/renderNote.js";
-import { findOneNote } from "../data/notes.js";
+import { renderArchiveNotesTable } from "../render/renderNotesTable.js";
+import { renderActiveNotesTable } from "../render/renderNotesTable.js";
+import { getNotes } from "../data/notes.js";
 
-export const archiveNote = (archiveId, note, tBody) => {
-    const archiveBody = document.querySelector('.archives-table__body');
-    const archiveNote = findOneNote(archiveId);
-
+export const archiveNote = (archiveId) => {
     archiveOneNote(archiveId);
-
-    tBody.removeChild(note);
-    archiveBody.innerHTML += renderNote(archiveNote);
-    
+    const updatedNotes = getNotes();
+    renderActiveNotesTable(updatedNotes);
+    renderArchiveNotesTable(updatedNotes);
 }

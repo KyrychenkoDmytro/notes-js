@@ -26,7 +26,11 @@ table {
 
 th,
 td {
+  max-width: 280px;
   padding: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 td {
@@ -153,10 +157,19 @@ form {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 42px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 42px;
+          flex: 0 0 42px;
   height: 42px;
   background-color: #616161;
   border-radius: 50%;
+}
+.notes-table__body-name span,
+.archives-table__body-name span {
+  max-width: 220px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .notes-table__body-wrapper-icons,
 .archives-table__body-wrapper-icons {

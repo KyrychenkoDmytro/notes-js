@@ -6,7 +6,7 @@ import { createNote } from "./js/noteFunc/createNote.js";
 const createNoteBtn = document.querySelector('.create-new-note');
 const tbodyNotes = document.querySelector('.notes-table__body');
 
-renderActiveNotesTable(tbodyNotes, notes);
+renderActiveNotesTable(notes);
 renderArchiveNotesTable(notes);
 
 createNoteBtn.addEventListener('click', () => createNote(tbodyNotes, notes));

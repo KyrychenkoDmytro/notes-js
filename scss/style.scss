@@ -26,7 +26,11 @@ table {
 
 th,
 td {
+  max-width: 280px;
   padding: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 td {
@@ -130,10 +134,16 @@ form {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 42px;
+        flex: 0 0 42px;
         height: 42px;
         background-color: $bg-icon-task;
         border-radius: 50%;
+      }
+      span {
+        max-width: 220px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
     }
 

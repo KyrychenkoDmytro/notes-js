@@ -1,7 +1,8 @@
-// import renderSummary from '../render/renderSummary.js';
-import { removeOneNote } from '../data/notes.js';
+import { getNotes, removeOneNote } from '../data/notes.js';
+import { renderActiveNotesTable } from '../render/renderNotesTable.js';
 
-export const deleteNote = (deleteId, note, tBody) => {
+export const deleteNote = (deleteId ) => {
     removeOneNote(deleteId);
-    tBody.removeChild(note);
+    const updatedNotes = getNotes();
+    renderActiveNotesTable(updatedNotes)
 }

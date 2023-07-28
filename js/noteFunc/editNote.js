@@ -1,11 +1,11 @@
-import { findOneNote } from "../data/notes.js";
+import { findOneNote, getNotes } from "../data/notes.js";
 import { addFormToCreateNote } from "./addFormToCreateNote.js";
 import { removeOneNote } from "../data/notes.js";
 import { notes } from "../data/notes.js";
 import { addNoteButtonsListener } from "./addNoteButtonsListener.js";
-import { renderNote } from "../render/renderFunc/renderNote.js";
-import { addNewNote } from "../data/notes.js";
 import { setNewObjNote } from "./setNewObjNote.js";
+import { renderActiveNotesTable } from "../render/renderNotesTable.js";
+import { updateOneNote } from "../data/notes.js";
 
 export const editNote = (editId, note, tBody) => {
   const createNoteBtn = document.querySelector('#createNote');
@@ -15,6 +15,7 @@ export const editNote = (editId, note, tBody) => {
 
   removeOneNote(editId);
   tBody.removeChild(note);
+
 
   addFormToCreateNote(findNote);
   const closeFormBtn = document.querySelector('#closeForm');
@@ -30,21 +31,24 @@ export const editNote = (editId, note, tBody) => {
   submitFormBtn.addEventListener('click', () => {
 
     if (!emptyValue) {
-      console.log(previousDate);
       const newNote = setNewObjNote(form, editId, previousDate);
-      addNewNote(newNote);
-      tBody.removeChild(parentForm);
-      tBody.innerHTML += renderNote(newNote);
+      updateOneNote(editId, newNote);
+      const updatedNotes = getNotes();
+      renderActiveNotesTable(updatedNotes);
       createNoteBtn.disabled = false;
-      addNoteButtonsListener(tBody, notes);
+      addNoteButtonsListener(tBody, updatedNotes);
     }
+
   })
 
   closeFormBtn.addEventListener('click', () => {
 
     if (!emptyValue) {
-      tBody.removeChild(parentForm);
+      updateOneNote(editId, findNote);
+      const updatedNotes = getNotes();
+      renderActiveNotesTable(updatedNotes);
       createNoteBtn.disabled = false;
+      addNoteButtonsListener(tBody, updatedNotes);
     }
   })
   addNoteButtonsListener(tBody, notes);

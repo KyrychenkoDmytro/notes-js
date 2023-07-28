@@ -1,15 +1,17 @@
 import { renderNote } from "./renderFunc/renderNote.js";
 import { addNoteButtonsListener } from "../noteFunc/addNoteButtonsListener.js";
 
-export const renderActiveNotesTable = (tbodyNotes, notes) => {
+export const renderActiveNotesTable = (notes) => {
     const tableBody = document.querySelector('.notes-table__body');
     tableBody.innerHTML = '';
+    console.log(notes);
     notes.forEach((note) => {
         if (!note.archived) {
+
             tableBody.innerHTML += renderNote(note);
         }
     })
-    addNoteButtonsListener(tbodyNotes, notes);
+    addNoteButtonsListener(tableBody, notes);
 }
 
 export const renderArchiveNotesTable = (notes) => {

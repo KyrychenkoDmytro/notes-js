@@ -78,6 +78,7 @@ form {
           align-items: center;
   width: 36px;
   height: 36px;
+  cursor: pointer;
 }
 .notes-table__header th,
 .archives-table__header th {
@@ -199,6 +200,7 @@ form {
           align-items: center;
   width: 36px;
   height: 36px;
+  cursor: pointer;
 }
 
 .archives-table__name {
@@ -220,4 +222,20 @@ form {
   padding: 6px 12px;
   font-size: 22px;
   border-radius: 6px;
+  cursor: pointer;
+}
+
+.unArchiveNote {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.show-notes {
+  cursor: pointer;
+}
+
+.archiveNote td {
+  background-color: #dcccd1;
 }/*# sourceMappingURL=style.css.map */

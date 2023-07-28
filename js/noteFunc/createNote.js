@@ -2,7 +2,7 @@ import { addFormToCreateNote } from "./addFormToCreateNote.js";
 import { setNewObjNote } from "./setNewObjNote.js";
 import { addNewNote } from "../data/notes.js";
 import { addNoteButtonsListener } from "./addNoteButtonsListener.js";
-import { renderActiveNotesTable } from "../render/renderNotesTable.js";
+import { renderActiveNotesTable, renderArchiveNotesTable } from "../render/renderNotesTable.js";
 import { getNotes } from "../data/notes.js";
 
 export const createNote = (tbody, notes) => {
@@ -34,6 +34,7 @@ export const createNote = (tbody, notes) => {
             addNewNote(newNote);
             const updatedNotes = getNotes();
             renderActiveNotesTable(updatedNotes);
+            renderArchiveNotesTable(updatedNotes);
             createNoteBtn.disabled = false;
             addNoteButtonsListener(tbody, updatedNotes);
         }

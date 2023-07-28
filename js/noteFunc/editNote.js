@@ -20,7 +20,6 @@ export const editNote = (editId, note, tBody) => {
   addFormToCreateNote(findNote);
   const closeFormBtn = document.querySelector('#closeForm');
   const submitFormBtn = document.querySelector('#submitNote');
-  const parentForm = document.querySelector('.notes-form');
   const form = document.querySelector('#noteForm');
   const previousDate = form.elements[1].value;
   const emptyValue =

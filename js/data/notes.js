@@ -88,3 +88,12 @@ export const archiveOneNote = (id) => {
         note.archived = true;
     }
 };
+export const unarchiveOneNote = (id) => {
+    const note = notes.find((note) => Number(note.id) === Number(id));
+    if (note) {
+        note.archived = false;
+    }
+};
+export const archiveAllNotes = () => notes.map((note) => (note.archived = true));
+export const deleteAllNotes = () => (notes = []);
+export const findObjectsWithCategoryAndArchived = (category) => notes.filter(note => note.category === category && note.archived === true);

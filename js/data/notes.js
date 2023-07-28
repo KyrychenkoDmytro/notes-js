@@ -72,4 +72,12 @@ export let notes = [
 ];
 
 export const getNotes = () => notes;
+export const findOneNote = (findId) => notes.find((note) => note.id === Number(findId));
 export const addNewNote = (newNote) => (notes = [...notes, newNote]);
+export const removeOneNote = (id) => (notes = [...notes.filter((note) => note.id !== id)]);
+export const archiveOneNote = (id) => {
+    const note = notes.find((note) => note.id === id);
+    if (note) {
+        note.archived = true;
+    }
+};

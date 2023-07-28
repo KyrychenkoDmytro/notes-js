@@ -201,6 +201,19 @@ form {
   height: 36px;
 }
 
+.archives-table__name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.archives-table__td {
+  text-align: center;
+}
+
 .create-new-note {
   display: block;
   margin: 0 0 40px auto;

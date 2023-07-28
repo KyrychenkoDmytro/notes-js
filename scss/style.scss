@@ -139,6 +139,7 @@ form {
         background-color: $bg-icon-task;
         border-radius: 50%;
       }
+
       span {
         max-width: 220px;
         text-overflow: ellipsis;
@@ -164,6 +165,15 @@ form {
       height: 36px;
     }
   }
+}
+
+.archives-table__name {
+  display: flex;
+  justify-content: center;
+}
+
+.archives-table__td {
+  text-align: center;
 }
 
 .create-new-note {
